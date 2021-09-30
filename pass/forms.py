@@ -5,12 +5,12 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .models import *
 
-class Passlist(ModelForm):
+class PassForm(ModelForm):
     class Meta:
         Model = passlist
-        fields = ['email','username','password']
+        fields = ['email_acc','username_acc','password_acc']
 
-class Registration(UserCreationForm):
+class RegistrationForm(UserCreationForm):
     class Meta:
         Model = User
         fields = ['username','email','password1','password2']
