@@ -1,16 +1,16 @@
 from django import forms
 from django.db.models import fields
-from django.forms.models import Model
+from django.forms.models import ModelForm
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .models import *
 
 class PassForm(ModelForm):
     class Meta:
-        Model = passlist
-        fields = ['email_acc','username_acc','password_acc']
+        model = passlist
+        fields = ['account_type','application_name','email','username','password']
 
 class RegistrationForm(UserCreationForm):
     class Meta:
-        Model = User
+        model = User
         fields = ['username','email','password1','password2']

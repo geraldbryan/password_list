@@ -1,0 +1,15 @@
+<div class="col-md-8">
+    <h1>List of Credit Card Account</h1>
+    <hr>
+    {% for result in result %}
+        <div class="container; content-section">
+            <div class="article-metadata">
+                <a class="mr-2" href="{% url 'trading-detail' result.id%}" >{{ result.application_name }} </a>
+                <br>
+            </div>
+            <div>
+                <p class="article-content"> username : {{ result.username }}</p> 
+            </div>
+        </div>
+     {% endfor %}
+</div>

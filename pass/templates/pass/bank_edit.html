@@ -1,0 +1,17 @@
+{% load crispy_forms_filters %}
+    
+<br>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <h4>Edit Account Information</h4>
+            <hr>
+            <form action="" method="post">
+              {% csrf_token %}
+              {{ form | crispy }}
+              <br>
+              <input class="btn btn-sm btn-primary" type="submit" name="Submit" />
+            </form>
+        </div>
+        </div>
+      </div>
